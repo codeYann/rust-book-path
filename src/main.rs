@@ -1,11 +1,7 @@
-mod guessing_game;
-
-fn greetings(a: String) {
-    println!("this is my string: {}", a);
-}
+mod common_pc;
 
 fn main() {
-    println!("Hello, world!");
-    greetings("My name is Yan!".to_string());
-    guessing_game::make_guess();
+    println!("{}", common_pc::vars::TREE_HOURS);
+    common_pc::data_types::show_char('😻');
+    common_pc::data_types::dealing_tuples((1, 2));
 }
