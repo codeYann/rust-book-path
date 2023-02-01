@@ -2,7 +2,7 @@ use rand::Rng; // Using rand lib for generate a random number
 use std::cmp::Ordering;
 use std::io;
 
-pub fn make_guess() {
+pub fn _make_guess() {
     println!("guess the number!");
 
     // Generate random number in [1, 100]
