@@ -1,8 +1,7 @@
 pub fn _chars() {
     let l0 = 'Y';
     let l1 = 'a';
-    let l2 = 'N';
-
+    let l2 = 'n';
     println!("{l0}, {l1}, {l2}");
 }
 
@@ -16,5 +15,5 @@ pub fn _strs() {
     // String is define in heap memory space
 
     nome.push_str(" Rodrigues"); // We can use push_str to append a new str slice to nome var
-    println!("{nome}")
+    println!("{nome}");
 }
