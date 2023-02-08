@@ -1,1 +1,2 @@
-pub mod owner;
+pub mod ownership_in_functions;
+pub mod ownership_in_vars;
