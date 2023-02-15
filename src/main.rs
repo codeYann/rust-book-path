@@ -19,4 +19,8 @@ fn main() {
     let result = enums::pattern_match::_value_in_cents(&enumeration);
     println!("{:?}, {}", enumeration, result);
 
+    let value = enums::pattern_match::_matching_things();
+    println!("{}", value);
+
+    enums::pattern_match::_if_let_short_hand();
 }
