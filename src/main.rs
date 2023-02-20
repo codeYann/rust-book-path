@@ -1,6 +1,5 @@
-mod errors;
-use errors::example_errors;
-
+mod guessing_game;
+use guessing_game::_make_guess;
 fn main() {
-    example_errors::__exec_it();
+    _make_guess();
 }
