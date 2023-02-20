@@ -2,6 +2,24 @@ use rand::Rng; // Using rand lib for generate a random number
 use std::cmp::Ordering;
 use std::io;
 
+pub struct Guess {
+    value: i32,
+}
+
+impl Guess {
+    // add code here
+    pub fn new(value: i32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Guess value must be in [1, 100] range");
+        }
+        return Self { value };
+    }
+
+    pub fn value(&self) -> i32 {
+        return self.value;
+    }
+}
+
 pub fn _make_guess() {
     println!("guess the number!");
 
@@ -29,16 +47,18 @@ pub fn _make_guess() {
         chances = chances - 1;
 
         // Parsing guess_str to u32 number and checking if input is valid!
-        let guess_number: u32 = match guess_str.trim().parse() {
+        let guess_number: i32 = match guess_str.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
-        println!("You guessed: {}", guess_number);
+        let final_guessed_number = Guess::new(guess_number);
+
+        println!("You guessed: {}", final_guessed_number.value());
 
         println!("Please type a number");
         // Comparing the user input and secret number
-        match guess_number.cmp(&secret_number) {
+        match final_guessed_number.value().cmp(&secret_number) {
             Ordering::Less => println!("Too small!!"),
             Ordering::Equal => {
                 println!("You win!!");
