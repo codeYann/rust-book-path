@@ -33,7 +33,20 @@ pub fn _iterating_over_strings() {
     let mut empty_string = String::new();
 
     empty_string.push_str(&s1[0..]);
-    
 
     println!("{empty_string}");
+}
+
+pub fn _strings_methods() {
+    let mut s1 = "Здравствуйте".to_string();
+    s1 = s1.replace(&s1[0..=1], &s1[2..]);
+    println!("{}", s1);
+
+    let s2 = "ola que tal?".to_string();
+
+    if s2.contains("zz") {
+        println!("marolento");
+    } else {
+        println!("🦀");
+    }
 }
