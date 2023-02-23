@@ -1,10 +1,9 @@
-use collect::strs;
 mod collect;
 
+use collect::hashmaps;
+
 fn main() {
-    strs::_dealing_with_string_type();
-    strs::_concat_with_plus_operator();
-    strs::_slicing_string();
-    strs::_iterating_over_strings();
-    strs::_strings_methods();
+    hashmaps::__updating_hash_map();
+    hashmaps::__entry_method();
+    hashmaps::__updating_based_old_values();
 }
