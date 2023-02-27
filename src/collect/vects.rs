@@ -1,4 +1,4 @@
-pub fn dealing_with_vectors() {
+pub fn _dealing_with_vectors() {
     // When we define a vector we can use Vec::new(), but we need to specify the type of vector
     let mut v: Vec<i32> = vec![15, 320, 215];
     v.push(10);
@@ -15,7 +15,7 @@ pub fn dealing_with_vectors() {
     println!("{:?}, {:?}", v, u);
 }
 
-pub fn reading_values_from_vecs() {
+pub fn _reading_values_from_vecs() {
     let mut v: Vec<i32> = Vec::new();
     v.push(0);
 
@@ -43,7 +43,7 @@ pub fn reading_values_from_vecs() {
     println!("{:?}", v);
 }
 
-pub fn borrowing_in_vec() {
+pub fn _borrowing_in_vec() {
     let mut v = vec![1, 2, 3, 4];
 
     let first = &mut v[0];
@@ -55,41 +55,37 @@ pub fn borrowing_in_vec() {
     println!("{:?}", v);
 }
 
-pub fn iterating_over_a_vec() {
-
+pub fn _iterating_over_a_vec() {
     let mut v = vec![1, 2, 3, 4];
     for i in &v {
         println!("{}", i);
     }
 
     for i in &mut v {
-        *i += 1; 
+        *i += 1;
         println!("{}", i);
     }
 }
 
-pub fn vecs_and_enums() {
-
+pub fn _vecs_and_enums() {
     #[derive(Debug)]
     pub enum Ball {
-        BasketBall(String),
-        FootBall(String),
-        VolleyBall(String),
+        _BasketBall(String),
+        _FootBall(String),
+        _VolleyBall(String),
     }
 
     let store_ball = vec![
-        Ball::BasketBall(String::from("Clapton")),
-        Ball::FootBall(String::from("Topper")),
-        Ball::VolleyBall(String::from("haikyuu")),
+        Ball::_BasketBall(String::from("Clapton")),
+        Ball::_FootBall(String::from("Topper")),
+        Ball::_VolleyBall(String::from("haikyuu")),
     ];
 
     for balls in &store_ball {
         match balls {
-            Ball::FootBall(v) => println!("Yeahh {v}"),
-            Ball::BasketBall(v) => println!("tmr n c {v}"),
-            Ball::VolleyBall(v) => println!("even my type {v}"),
+            Ball::_FootBall(v) => println!("Yeahh {v}"),
+            Ball::_BasketBall(v) => println!("tmr n c {v}"),
+            Ball::_VolleyBall(v) => println!("even my type {v}"),
         }
     }
-
-
 }
