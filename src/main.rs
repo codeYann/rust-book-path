@@ -1,9 +1,8 @@
 mod collect;
 
 fn main() {
-    collect::vects::dealing_with_vectors();
-    collect::vects::reading_values_from_vecs();
-    collect::vects::borrowing_in_vec();
-    collect::vects::iterating_over_a_vec();
-    collect::vects::vecs_and_enums();
+    collect::strs::_dealing_with_string_type();
+    collect::strs::_concat_with_plus_operator();
+    collect::strs::_slicing_string();
+    collect::strs::_iterating_over_strings();
 }
