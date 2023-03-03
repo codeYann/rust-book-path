@@ -50,8 +50,7 @@ pub fn __propagating_errors_using_question_operator() -> Result<String, io::Erro
     return Ok(username);
 }
 
-pub fn __using_question_operator() -> Result<i32, String>{
-
+pub fn __using_question_operator() -> Result<i32, String> {
     pub fn divide(a: i32, b: i32) -> Result<i32, String> {
         if b == 0 {
             return Err("Cannot divide by 0".to_string());
