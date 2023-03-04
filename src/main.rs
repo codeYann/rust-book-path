@@ -1,5 +1,7 @@
-mod guessing_game;
-use guessing_game::_make_guess;
+mod generics;
+use generics::gen;
+
 fn main() {
-    _make_guess();
+    gen::_exec_largest();
+    gen::_exec_point();
 }
