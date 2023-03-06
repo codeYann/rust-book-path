@@ -1,17 +1,20 @@
 mod generics;
-use generics::traits::{Tweet, _exec_it, self};
+use generics::traits_examples::{MyEnum, MyTrait};
 
-fn main() {
-    let my_tweet = Tweet {
-        _username: "codeYan".to_string(),
-        _content: "This is my first tweet :))".to_string(),
-        _reply: false,
-        _retweet: false,
-    };
+// Writting a function to consume this particular .sum() function
+// It's important to notice that consume_this_trait receive a &impl MyTrait as a param
+// in other words any type that implements MyTrait is able to use this function
+// also consume_this_trait returns a Result<i32, ()> that means that we can use question mark
+// operator
+fn consume_this_trait(it: &impl MyTrait) -> Result<i32, ()> {
+    let v = it.sum()?;
+    return Ok(v);
+}
 
-    let value = traits::_test_it(&my_tweet);
+fn main() -> Result<(), ()> {
+    let v = MyEnum::Counter(15);
+    let it = consume_this_trait(&v)?;
 
-    println!("{}", value);
-
-    _exec_it();
+    println!("{it}");
+    return Ok(());
 }
