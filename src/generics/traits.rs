@@ -54,5 +54,5 @@ pub fn _exec_it() {
 }
 
 pub fn _test_it(it: &impl Summary) -> String {
-    return it.summarize()
+    return it.summarize();
 }
