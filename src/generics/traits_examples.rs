@@ -1,24 +1,24 @@
 // Traits defines a "contract" that some type must do
-pub trait MyTrait {
-    fn sum(&self) -> Result<i32, ()>;
+pub trait _MyTrait {
+    fn _sum(&self) -> Result<i32, ()>;
 }
 
 // It's possible to use traits with enums
 #[derive(Debug)]
-pub enum MyEnum {
-    Counter(i32),
+pub enum _MyEnum {
+    _Counter(i32),
 }
 
-// In this particular trait, sum method returns a Result<i32, ()>
-// if the value of Counter(v) is less than 0 sum returns a Err(())
-// if not then sum returns Ok(v)
+// In this particular trait, _sum method returns a Result<i32, ()>
+// if the value of _Counter(v) is less than 0 _sum returns a Err(())
+// if not then _sum returns Ok(v)
 
-// it's clear that MyEnum should be MyStruct because why do someone creates a enum with one
+// it's clear that _MyEnum should be MyStruct because why do someone creates a enum with one
 // possibility?
-impl MyTrait for MyEnum {
-    fn sum(&self) -> Result<i32, ()> {
+impl _MyTrait for _MyEnum {
+    fn _sum(&self) -> Result<i32, ()> {
         match &self {
-            MyEnum::Counter(v) => {
+            _MyEnum::_Counter(v) => {
                 if *v < 0 {
                     return Err(());
                 }
